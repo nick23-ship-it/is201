@@ -1,0 +1,156 @@
+
+/* ---- 1. base + custom BACKGROUND (font family + font color) ---- */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;   /* font family */
+  color: #1a2b3c;                                                /* font color  */
+  /* custom background: a layered color + subtle pattern */
+  background-color: #0E2138;
+  background-image:
+    radial-gradient(circle at 85% -10%, rgba(232,163,61,0.18), transparent 45%),
+    radial-gradient(circle at 0% 100%, rgba(190,75,54,0.16), transparent 45%),
+    linear-gradient(180deg, #0E2138 0%, #122a45 100%);
+  background-attachment: fixed;
+  line-height: 1.65;
+}
+
+/* ---- 2. top navigation bar (positions a div) ---- */
+.scratch-nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 28px;
+  background: rgba(14, 33, 56, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid #E8A33D;
+  z-index: 10;
+}
+.scratch-nav .logo {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  color: #F6F2E9;
+  font-size: 1.15rem;
+  margin-right: auto;
+}
+.scratch-nav a {
+  color: #cdd6e2;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.scratch-nav a:hover { color: #E8A33D; }
+
+/* ---- 3. centered content column (positions a div) ---- */
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 22px 80px;
+}
+
+/* ---- 4. hero band (positions a div) ---- */
+.hero-scratch {
+  text-align: center;
+  color: #F6F2E9;
+  padding: 70px 16px 40px;
+}
+.hero-scratch .kicker {
+  font-family: 'Archivo', sans-serif;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #E8A33D;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.hero-scratch h1 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  font-size: 2.8rem;
+  margin: 10px 0 14px;
+  line-height: 1.08;
+}
+.hero-scratch p { color: #cdd6e2; max-width: 600px; margin: 0 auto; }
+.hero-scratch img { width: 100%; max-width: 560px; margin-top: 26px; border-radius: 8px; border: 3px solid #E8A33D; }
+
+/* ---- 5. content cards on cream (positions a div) ---- */
+.panel {
+  background: #F6F2E9;
+  border-radius: 10px;
+  padding: 30px 34px;
+  margin: 26px 0;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.28);
+}
+.panel h2 {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 800;
+  color: #0E2138;
+  border-left: 6px solid #E8A33D;
+  padding-left: 12px;
+  margin-top: 0;
+}
+.panel a { color: #BE4B36; font-weight: 600; }
+
+/* two-column split inside a panel (positions a div) */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: center;
+}
+@media (max-width: 720px) { .split { grid-template-columns: 1fr; } }
+.split img { width: 100%; border-radius: 8px; }
+
+/* nested-list styling */
+.steps { color: #1a2b3c; }
+.steps > li { margin-bottom: 10px; font-weight: 600; }
+.steps ul li { font-weight: 400; color: #44617B; }
+
+/* the embedded media frames */
+.frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;        /* 16:9 */
+  border-radius: 8px;
+  overflow: hidden;
+  border: 3px solid #0E2138;
+  background: #000;
+}
+.frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* Tableau container */
+.tableau-box { width: 100%; min-height: 540px; }
+
+/* button-style links */
+.btn-scratch {
+  display: inline-block;
+  background: #E8A33D;
+  color: #0E2138 !important;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 4px;
+  margin: 6px 6px 0 0;
+}
+.btn-scratch.dark { background: #0E2138; color: #F6F2E9 !important; }
+.btn-scratch:hover { background: #c9852a; }
+
+/* back-to-top anchor link */
+.to-top {
+  display: inline-block;
+  margin-top: 24px;
+  color: #E8A33D;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer.scratch-foot {
+  text-align: center;
+  color: #93a2b6;
+  padding: 30px 16px 50px;
+  font-size: 0.9rem;
+}
+
+/* keyboard focus visibility */
+a:focus-visible { outline: 3px solid #E8A33D; outline-offset: 2px; }

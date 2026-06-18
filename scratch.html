@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why Angola — Nicholas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link href="scratch.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <span id="top"></span>
+
+  <div class="scratch-nav">
+    <span class="logo">Nicholas</span>
+    <a href="#story">My story</a>
+    <a href="#route">The route</a>
+    <a href="#video">Video</a>
+    <a href="#data">Data</a>
+    <a href="index.html">Professional site &rarr;</a>
+    <a href="webapp.html">Pricing app &rarr;</a>
+  </div>
+
+  <!-- ===== hero ===== -->
+  <div class="hero-scratch">
+    <p class="kicker">A personal page · built from scratch</p>
+    <h1>Why Angola is the thread<br>through everything I do</h1>
+    <p>This isn't my polished portfolio — it's the story behind it. How two years on the
+       other side of the Atlantic turned into a business, a language, and a plan.</p>
+    <img src="routemap.svg" alt="Map of my trade route from Stockton, California to Luanda, Angola">
+  </div>
+
+  <div class="page">
+
+    <div class="panel" id="story">
+      <h2>The short version</h2>
+      <p>I'm a first-generation American from Stockton, California, and the oldest son in my
+         family. At nineteen I left for a 26-month service mission in
+         <strong>Angola</strong> and <strong>São Tomé and Príncipe</strong> — where I learned
+         Portuguese, led organizational efforts across Luanda Province, and helped formally
+         open São Tomé to my church.</p>
+      <p>I came home with a third language and a market I understood from the inside. That's
+         where my electronics business started: buying iPhones here, selling them there.</p>
+    </div>
+
+    <div class="panel" id="route">
+      <h2>How a batch actually moves</h2>
+      <p>Every shipment follows the same ordered path — and step&nbsp;3 is where most of the
+         thinking happens:</p>
+
+      <ol class="steps">
+        <li>Source unlocked devices from trusted U.S. suppliers.</li>
+        <li>Inspect, grade, and prep each unit for export.</li>
+        <li>Price the batch — this is the part I model carefully:
+          <ul>
+            <li>U.S. cost plus freight and import fees = landed cost</li>
+            <li>Convert to Angolan kwanza at the day's rate</li>
+            <li>Add a target margin that the local market will bear</li>
+          </ul>
+        </li>
+        <li>Ship to Luanda and clear customs.</li>
+        <li>Hand off to my buyer network and reconcile the numbers.</li>
+      </ol>
+
+      <p>I built a small calculator to do step 3 in seconds &mdash;
+         <a href="webapp.html">try the pricing app here</a>.</p>
+    </div>
+
+    <div class="panel" id="video">
+      <h2>A video worth your time</h2>
+      <p>A video I wanted to share.</p>
+
+      <div class="frame">
+        <iframe src="https://www.youtube.com/embed/p_70O0TdJLM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="panel" id="data">
+      <h2>I think in data</h2>
+      <div class="split">
+        <div>
+          <p>My information-systems coursework pushed me deep into analytics — SQL, VBA,
+             Excel optimization, and Tableau. Below is a live, interactive Tableau dashboard
+             you can filter and hover. Drag, click, and explore it.</p>
+          <p>My own shipment volume tells a simple story: steady growth, month over month.</p>
+        </div>
+        <img src="shipmentschart.png" alt="Bar chart of monthly devices shipped from Stockton to Luanda">
+      </div>
+
+      <div id="vizContainer" class="tableau-box" style="margin-top:18px;"></div>
+    </div>
+
+    <div class="panel" style="text-align:center;">
+      <h2 style="border:none;display:inline-block;">Want the professional version?</h2>
+      <p>The polished side has my full portfolio and résumé.</p>
+      <a class="btn-scratch dark" href="index.html">Visit my professional site</a>
+      <a class="btn-scratch" href="resume.html">See my résumé</a>
+      <a class="btn-scratch" href="webapp.html">Open the pricing app</a>
+      <br>
+      <a class="to-top" href="#top">&uarr; Back to top</a>
+    </div>
+
+  </div>
+
+  <footer class="scratch-foot">
+    Built by hand with HTML &amp; CSS · Nicholas · 2026
+  </footer>
+
+  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+  <script type="text/javascript">
+    function initViz() {
+      var container = document.getElementById("vizContainer");
+      var url = "https://public.tableau.com/views/InventoryManagementDashboard_16184993657110/INVENTORYMANAGEMENTDASHBOARD";
+      var options = {
+        hideTabs: true,
+        width: "100%",
+        height: "560px"
+      };
+      new tableau.Viz(container, url, options);
+    }
+    initViz();
+  </script>
+
+</body>
+</html>
